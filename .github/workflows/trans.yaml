@@ -1,12 +1,14 @@
-name: learn-github-actions
+name: zip-compress-test
 on: [push]
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "this is pen"
+      - run: echo "zip compress"
       - uses: actions/checkout@v2
       - run: |
+          ls -al
+          zip archive -r ./
           ls -al
           cd .github/workflows/
           ls -al
